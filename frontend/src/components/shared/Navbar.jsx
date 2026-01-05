@@ -118,8 +118,14 @@ const Navbar = () => {
   return (
     <div className="w-full shadow-sm sticky top-0 bg-white z-50">
       <div className="flex items-center justify-between mx-auto max-w-7xl h-16 px-4">
-        <h1 className="text-2xl font-bold">
+        {/* <h1 className="text-2xl font-bold">
           Job<span className="text-red-500">Portal</span>
+        </h1> */}
+        <h1 className="text-2xl sm:text-3xl font-extrabold tracking-wide">
+          Job
+          <span className="bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent">
+            Portal
+          </span>
         </h1>
 
         {/* Hamburger for small screens */}
@@ -254,7 +260,7 @@ const Navbar = () => {
               <div>
                 <h1 className="font-medium">{user.fullname}</h1>
                 <p className="text-sm text-muted-foreground">Welcome to my profile</p>
-                 
+
                 <div className="flex gap-2 mt-1">
                   {
                     user && user.role === 'student' && (

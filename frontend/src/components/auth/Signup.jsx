@@ -12,7 +12,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { setLoading } from '@/redux/authSlice'
 import { Loader2 } from 'lucide-react'
 const Signup = () => {
-   const { user } = useSelector(store => store.auth)
+  const { user } = useSelector(store => store.auth)
   const [input, setInput] = useState({
     fullname: "",
     email: "",
@@ -63,12 +63,16 @@ const Signup = () => {
       dispatch(setLoading(false))
     }
   }
-   useEffect(() => {
-    if(user){
-      nagivate("/")
+  //  useEffect(() => {
+  //   if(user){
+  //     nagivate("/")
+  //   }
+  //  }, []);
+  useEffect(() => {
+    if (user) {
+      nagivate("/");
     }
-   }, []);
-
+  }, [user, navigate]);
   return (
     <div className="">
       <Navbar />

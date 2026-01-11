@@ -72,7 +72,7 @@ const Signup = () => {
     if (user) {
       nagivate("/");
     }
-  }, [user, navigate]);
+  }, [user, nagivate]);
   return (
     <div className="">
       <Navbar />
